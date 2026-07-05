@@ -1,0 +1,8 @@
+# Windows
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
