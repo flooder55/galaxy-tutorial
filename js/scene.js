@@ -3,7 +3,6 @@
     cam,
     rdr,
     sun,
-    fld,
     orbs = [],
     texL = new THREE.TextureLoader();
 
@@ -154,7 +153,7 @@ function mkStars() {
         p[i+2] = (Math.random() - .5) * 750;
     }
     g.setAttribute("position", new THREE.BufferAttribute(p, 3));
-    fld = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffffff, size: .65 }));
+    var fld = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffffff, size: .65 }));
     scene.add(fld);
 }
 
@@ -244,6 +243,7 @@ function tick() {
 
 // 延迟启动
 setTimeout(function () { boot(); tick(); }, 50);
+
 
 
 

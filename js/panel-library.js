@@ -127,9 +127,6 @@ function openPanel(planet) {
         }
     }
 
-    if (window.PlanetDisaster && window.PlanetDisaster.trigger) {
-        window.PlanetDisaster.trigger(planet);
-    }
 }
 
 function closePanel() {
@@ -142,9 +139,6 @@ function closePanel() {
     }
 
     currentPlanet = null;
-    if (window.PlanetDisaster && window.PlanetDisaster.dismiss) {
-        window.PlanetDisaster.dismiss();
-    }
 }
 
 createPanelHTML();
@@ -168,6 +162,7 @@ document.getElementById('refresh-btn').onclick = function() {
         showPlanetPanel(currentPlanet);
     }
 };
+
 
 
 
